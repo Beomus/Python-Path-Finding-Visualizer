@@ -76,7 +76,8 @@ class App:
         # self.grid_background = pygame.image.load('grid.png')
         pass
 
-    def draw_text(self, words, screen, pos, size, color, font_name, center=False):
+    @staticmethod
+    def draw_text(words, screen, pos, size, color, font_name, center=False):
         font = pygame.font.SysFont(font_name, size)
         text = font.render(words, False, color)
         text_size = text.get_size()
